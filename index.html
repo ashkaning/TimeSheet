@@ -9,12 +9,71 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
     </title>
+    <style>
+        .current {
+            width: auto;
+            background-color: blue;
+
+
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 20px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
+        <table class="table">
+            <tr>
+                <th class=current>Current Employee</th>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Employee Name</h4>
+                </td>
+                <td>
+                    <h4>Role</h4>
+                </td>
+                <td>
+                    <h4>Start Date</h4>
+                </td>
+                <td>
+                    <h4>Months Worked</h4>
+                </td>
+                <td>
+                    <h4>Monthly Rate ($)</h4>
+                </td>
+            </tr>
+            <!--<tr>
+                <td><label id="employeeName"> </label></td>
+                <td><label id="role"></label> </td>
+                <td><label id="startDate"></label> </td>
+                <td><label id="monthsWorked"></label> </td>
+                <td><label id="monthlyRate"></label> </td>
+            </tr>-->
+            <tbody>
+                
+            </tbody>
+        </table>
+        <hr>
         <form>
             <div class="form-group">
                 <label for="exampleInputEmail1">Full Name</label>
@@ -26,7 +85,7 @@
             </div>
             <div class="form-group">
                 <label for="role">Start Date</label>
-                <input type="date" class="form-control" id="date" >
+                <input type="date" class="form-control" id="date">
             </div>
             <div class="form-group">
                 <label for="role">Monthly Rate</label>

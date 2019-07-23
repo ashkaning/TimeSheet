@@ -2,6 +2,7 @@ var fullName
 var rol
 var startDate
 var monthlyRate
+
 var config = {
     apiKey: "AIzaSyA5kSxmSEXivFwddsX5ynwn6ytx74PsTQ8",
     authDomain: "timesheetform-9ba33.firebaseapp.com",
@@ -22,16 +23,17 @@ $( document ).ready(function() {
         evt.preventDefault()
         
         fullName  = $("#fullName").val()
-        rol  = $("#rol").val()
+        role  = $("#role").val()
         monthlyRate  = $("#date").val()
-        monthlyRate  = $("#rate").val()
+        rate  = $("#rate").val()
         //alert("hi")
-   
+        
+       // console.log(convertedDate)
         database.ref().push({
             name: fullName,
-            role: rol,
+            role: role,
             date: monthlyRate,
-            rate: monthlyRate
+            rate: rate
           });
         
           
@@ -40,9 +42,16 @@ $( document ).ready(function() {
     })
 
     database.ref().on("child_added", function(snapshot) {
-        
-        
-        
+        monthWorked = snapshot.val().date
+        var convertDate = moment(monthWorked);
+        var convertedDate =convertDate.diff(moment(),"Months")
+        var newRow = $("<tr>").append(
+            $("<td>").text(snapshot.val().name),
+            $("<td>").text(snapshot.val().role),
+            $("<td>").text(snapshot.val().date),
+            $("<td>").text(convertedDate),
+        )
+        $(".table tbody").append(newRow)
     })
 })
 
