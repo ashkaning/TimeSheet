@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            TimeSheet
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        </title>
-    </head>
-    <body>  
-        <div class="container">
-            <button class="button" id="divGenerator" value="Add HTML Row">Add HTML Row</button>
+<head>
+    <title>
+        TimeSheet
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        </div>
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Full Name</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input type="text" class="form-control" id="role" placeholder="CEO">
+            </div>
+            <div class="form-group">
+                <label for="role">Start Date</label>
+                <input type="date" class="form-control" id="date" >
+            </div>
+            <div class="form-group">
+                <label for="role">Monthly Rate</label>
+                <input type="number" class="form-control" id="rate" placeholder="20000">
+            </div>
+
+            <button type="submit" id="addData" class="btn btn-primary">Submit</button>
+        </form>
 
 
 
         <script src="assets/javascript/app.js"></script>
-    </body>
+    </div>
+</body>
+
 </html>
